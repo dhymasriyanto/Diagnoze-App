@@ -18,6 +18,7 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textStyle="bold"
+        android:textColor="@color/dongker"
         android:text="Judul Buku"
         android:padding="10dp"/>
 

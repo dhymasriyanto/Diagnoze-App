@@ -17,6 +17,8 @@ public class ThemeUtils {
     }
 
     public static void onActivityCreateSetTheme(Activity activity){
+        HalamanAwal halamanAwal = new HalamanAwal();
+        Detail detail = new Detail();
         switch (themee){
             default:
             case White:

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -19,7 +20,6 @@ import com.example.diagnoze.ThemeUtils;
 public class SlideshowFragment extends Fragment {
 
     private SlideshowViewModel slideshowViewModel;
-    private Button dark, light;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -33,6 +33,15 @@ public class SlideshowFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+//        final Switch sw = root.findViewById(R.id.switch1);
+//
+//        if (sw.isChecked()){
+//            ThemeUtils.ubahTema(getActivity(),ThemeUtils.Black);
+//        } else {
+//            ThemeUtils.ubahTema(getActivity(),ThemeUtils.White);
+//        }
+
 
         final Button dark = root.findViewById(R.id.btn_dark);
         final Button light = root.findViewById(R.id.btn_light);
