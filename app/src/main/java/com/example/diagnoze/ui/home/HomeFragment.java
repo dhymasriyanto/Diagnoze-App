@@ -17,7 +17,6 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.diagnoze.HalamanAwal;
 import com.example.diagnoze.Macam2Penyakit;
-import com.example.diagnoze.PertanyaanActivity;
 import com.example.diagnoze.R;
 import com.example.diagnoze.ThemeUtils;
 
@@ -41,14 +40,6 @@ public class HomeFragment extends Fragment {
         final Button DiagnosaPenyakit = root.findViewById(R.id.btn_diagnosa_penyakit);
         final Button RSTerdekat = root.findViewById(R.id.btn_rs_terdekat);
         final Button MacamPenyakit = root.findViewById(R.id.btn_macam_penyakit);
-
-        DiagnosaPenyakit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getActivity(),PertanyaanActivity.class);
-                startActivity(i);
-            }
-        });
 
         MacamPenyakit.setOnClickListener(new View.OnClickListener() {
             @Override

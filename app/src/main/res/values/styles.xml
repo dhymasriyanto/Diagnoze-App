@@ -18,24 +18,12 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="LightTheme">
-        <item name="android:colorBackground">@color/cardview_light_background</item>
+        <item name="android:background">@color/tosca</item>
         <item name="android:textColor">@color/dongker</item>
-    </style>
-
-    <style name="LightTheme.Background">
-        <item name="android:background">@drawable/index2</item>
-        <item name="android:colorBackground">@color/cardview_light_background</item>
-        <item name="android:textColor">@color/dongker</item>
-
     </style>
 
     <style name="DarkTheme">
         <item name="android:background">@color/dongker</item>
-        <item name="android:textColor">@color/cardview_light_background</item>
-    </style>
-
-    <style name="DarkTheme.Background">
-        <item name="android:background">@drawable/ind2</item>
         <item name="android:textColor">@color/cardview_light_background</item>
     </style>
 
