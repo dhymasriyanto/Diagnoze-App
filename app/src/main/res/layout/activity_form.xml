@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    tools:context=".HalamanAwal">
+    tools:context=".FormActivity"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/text_home"
@@ -31,14 +31,31 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kenali macam - macam demam mu"
+        android:text="Tolong isi form berikut:"
         android:layout_marginTop="16dp"
         android:textColor="@color/tosca"
         android:textAlignment="center"
         android:textSize="25sp"/>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan nama"
+        />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan jenis kelamin"
+        android:entries="@array/jenis_kelamin"
+        />
+
     <Button
-        android:id="@+id/btn_diagnosa_penyakit"
+        android:id="@+id/btn_mulai_diagnosa"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="50dp"
@@ -48,33 +65,5 @@
         android:textColor="@color/dongker"
         android:background="@color/cardview_light_background"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginLeft="50dp">
-
-        <Button
-            android:id="@+id/btn_rs_terdekat"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:layout_marginRight="5dp"
-            android:text="Rumah Sakit Terdekat"
-            android:textColor="@color/dongker"
-            android:background="@color/cardview_light_background"/>
-
-        <Button
-            android:id="@+id/btn_macam_penyakit"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp"
-            android:text="Macam Penyakit Demam"
-            android:textColor="@color/dongker"
-            android:background="@color/cardview_light_background"/>
-    </LinearLayout>
 
 </LinearLayout>

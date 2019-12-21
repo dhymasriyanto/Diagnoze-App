@@ -36,8 +36,8 @@ public class Detail extends AppCompatActivity {
                 .apply(new RequestOptions())
                 .into(gambar_demam);
         nama_demam.setText(penyakit.getNama_penyakit());
-        gejala_demam.setText("Gejala Penyakit : \n"+penyakit.getGejala()+"\n");
-        pengobatan_demam.setText("Pengobatan : \n"+penyakit.getPengobatan()+"\n");
-        cara_pencegahan.setText("Cara Pencegahan : \n"+penyakit.getCara_mengatasi()+"\n");
+        gejala_demam.setText(penyakit.getGejala());
+        pengobatan_demam.setText(penyakit.getPengobatan());
+        cara_pencegahan.setText(penyakit.getCara_mengatasi());
     }
 }
