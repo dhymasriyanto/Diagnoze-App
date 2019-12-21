@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".HalamanAwal">
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="@color/dongker1"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Diagnoze"
+        android:textSize="63sp"
+        android:textAlignment="center"
+        android:textColor="@color/dongker"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kenali macam - macam demam mu"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/tosca"
+        android:textAlignment="center"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/btn_diagnosa_penyakit"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Diagnosa Penyakit mu"
+        android:textColor="@color/dongker"
+        android:background="@color/cardview_light_background"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp">
+
+        <Button
+            android:id="@+id/btn_rs_terdekat"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:text="Rumah Sakit Terdekat"
+            android:textColor="@color/dongker"
+            android:background="@color/cardview_light_background"/>
+
+        <Button
+            android:id="@+id/btn_macam_penyakit"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:text="Macam Penyakit Demam"
+            android:textColor="@color/dongker"
+            android:background="@color/cardview_light_background"/>
+    </LinearLayout>
+
+</LinearLayout>

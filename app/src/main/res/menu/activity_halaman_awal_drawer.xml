@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_ttg"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_ttg" />
+        <item
+            android:id="@+id/nav_pengaturan"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_pengaturan" />
+        <item
+            android:id="@+id/nav_riwayat"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/menu_riwayat" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_keluar"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_keluar" />
+        </menu>
+    </item>
+</menu>
