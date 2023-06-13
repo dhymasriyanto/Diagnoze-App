@@ -13,4 +13,12 @@
     <string name="menu_pengaturan">Pengaturan</string>
     <string name="menu_riwayat">Riwayat</string>
     <string name="menu_keluar">Keluar</string>
+
+    1
+
+    <string-array name="jenis_kelamin">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+
+    </string-array>
 </resources>

@@ -3,10 +3,14 @@ package com.example.diagnoze;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.diagnoze.Rest.BaseApiService;
+import com.example.diagnoze.Rest.UtilsApi;
+import com.example.diagnoze.model.Pertanyaan;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.button.MaterialButton;
 
+import android.util.Log;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -23,11 +27,22 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HalamanAwal extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private BaseApiService mApiService;
+    private SharedPrefManager sharedPrefManager;
+
+//    private int ID_GEJALA = 1;
+
+//    Button DiagnosaPenyakit, RSTerdekat, MacamPenyakit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,14 +50,6 @@ public class HalamanAwal extends AppCompatActivity {
         ThemeUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_halaman_awal);
 
-//        LinearLayout haa = findViewById(R.id.LLHalAwal);
-//        if (this.getTheme().equals(R.style.LightTheme)){
-//            haa.setBackground(getDrawable(R.drawable.index2));
-//        } else {
-//            haa.setBackground(getDrawable(R.drawable.ind2));
-//        }
-
-//        drawerLayout = findViewById(R.id.drawer_layout);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -73,13 +80,16 @@ public class HalamanAwal extends AppCompatActivity {
                 R.id.nav_riwayat, R.id.nav_keluar)
                 .setDrawerLayout(drawer)
                 .build();
-
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-
-
+//        sharedPrefManager = new SharedPrefManager(this);
+//        sharedPrefManager.saveSPInt(SharedPrefManager.SP_ID_GEJALA,ID_GEJALA);
+//
+//        mApiService = UtilsApi.getAPIService(); // meng-init yang ada di package apihelper
+//
+//        getPertanyaan();
     }
 
     @Override
@@ -95,4 +105,26 @@ public class HalamanAwal extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+//    private void getPertanyaan() {
+//        mApiService.getPertanyaan(1).enqueue(new Callback<Pertanyaan>() {
+//            @Override
+//            public void onResponse(Call<Pertanyaan> call, final Response<Pertanyaan> response) {
+//                if (response.body() != null) {
+//                    Toast.makeText(HalamanAwal.this, response.body().getData().get(0).getNamaGejala(), Toast.LENGTH_LONG).show();
+//                    Log.d("RETROFIT",response.body().getData().get(0).getNamaGejala());
+//                } else {
+//                    Toast.makeText(HalamanAwal.this, "Tidak ada respon server", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<Pertanyaan> call, Throwable t) {
+//                Toast.makeText(HalamanAwal.this, "Terjadi Kesalahan", Toast.LENGTH_SHORT).show();
+//                Log.d("RETROFIT",t.getMessage());
+//            }
+//        });
+//    }
+
+
 }
